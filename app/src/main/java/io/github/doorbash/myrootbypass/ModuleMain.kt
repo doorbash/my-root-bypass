@@ -97,7 +97,17 @@ class ModuleMain : XposedModule() {
                                     invokeMethods {
                                         add {
                                             returnType = "boolean"
-                                            usingStrings("Emulator", "FINGERPRINT")
+                                            invokeMethods {
+                                                add {
+                                                    returnType = "boolean"
+                                                    invokeMethods {
+                                                        add {
+                                                            returnType = "boolean"
+                                                            usingStrings("which", "su")
+                                                        }
+                                                    }
+                                                }
+                                            }
                                         }
                                     }
                                 }
@@ -107,6 +117,7 @@ class ModuleMain : XposedModule() {
 
                     hook(method.getMethodInstance(param.classLoader)).intercept {
 //                         log(Log.INFO, TAG, "bypassing root check for ${param.packageName}")
+                        false
                     }
                 }
             }
