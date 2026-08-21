@@ -58,7 +58,7 @@ class ModuleMain : XposedModule() {
                     }.singleOrNull() ?: error("The returned result is not unique")
 
                     hook(method.getMethodInstance(param.classLoader)).intercept {
-                        // log(Log.INFO, TAG, "bypassing root check for ${param.packageName}")
+//                        log(Log.INFO, TAG, "bypassing root check for ${param.packageName}")
                         0
                     }
                 }
@@ -80,7 +80,7 @@ class ModuleMain : XposedModule() {
                     }.singleOrNull() ?: error("The returned result is not unique")
 
                     hook(method.getMethodInstance(param.classLoader)).intercept {
-                        log(Log.INFO, TAG, "bypassing root check for ${param.packageName}")
+//                        log(Log.INFO, TAG, "bypassing root check for ${param.packageName}")
                         false
                     }
                 }
@@ -106,7 +106,7 @@ class ModuleMain : XposedModule() {
                     }.singleOrNull() ?: error("The returned result is not unique")
 
                     hook(method.getMethodInstance(param.classLoader)).intercept {
-                        // log(Log.INFO, TAG, "bypassing root check for ${param.packageName}")
+//                         log(Log.INFO, TAG, "bypassing root check for ${param.packageName}")
                     }
                 }
             }

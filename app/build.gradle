@@ -21,6 +21,7 @@ android {
             optimization {
                 enable false
             }
+            signingConfig = signingConfigs["debug"]
         }
     }
     compileOptions {
