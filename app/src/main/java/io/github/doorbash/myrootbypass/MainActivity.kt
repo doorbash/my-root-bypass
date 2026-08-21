@@ -1,11 +1,10 @@
-package io.github.doorbash.xposedtestmodule
+package io.github.doorbash.myrootbypass
 
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import io.github.doorbash.balerootbypass.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

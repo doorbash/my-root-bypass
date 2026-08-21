@@ -3,11 +3,11 @@ plugins {
 }
 
 android {
-    namespace 'io.github.doorbash.balerootbypass'
+    namespace 'io.github.doorbash.myrootbypass'
     compileSdk 37
 
     defaultConfig {
-        applicationId "io.github.doorbash.balerootbypass"
+        applicationId "io.github.doorbash.myrootbypass"
         minSdk 26
         targetSdk 37
         versionCode 1
@@ -40,4 +40,5 @@ dependencies {
     androidTestImplementation libs.androidx.junit
 
     compileOnly("io.github.libxposed:api:102.0.0")
+    implementation 'org.luckypray:dexkit:2.2.0'
 }
